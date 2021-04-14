@@ -5,7 +5,7 @@
         <div class="row ts-gutter-30">
             <div class="col-lg-8 col-md-12">
                 <h2 class="block-title">
-                    <span class="title-angle-shap">What's News </span>
+                    <span>What's News </span>
                 </h2>
 
                 <div class="row ts-gutter-20">
@@ -47,7 +47,7 @@
 
             <div class="col-lg-4 col-md-12">
                 <h2 class="block-title block-title-dark">
-                    <span class="title-angle-shap"> Video </span>
+                    <span> Video </span>
                 </h2>
                 @foreach($video as $n)
                 <div class="list-post-block">

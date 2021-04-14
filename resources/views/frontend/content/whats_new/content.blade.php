@@ -6,7 +6,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="featured-tab">
                     <h2 class="block-title">
-                        <span class="title-angle-shap"> What’s new</span>
+                        <span> What’s new</span>
                     </h2>
                     <div class="tab-content">
                         <div class="tab-pane active animated fadeInRight" id="tab_a">
@@ -47,7 +47,7 @@
                 <div class="sidebar">
                     <div class="sidebar-widget social-widget">
                         <h2 class="block-title">
-                            <span class="title-angle-shap"> Social</span>
+                            <span> Social</span>
                         </h2>
                         <div class="sidebar-social">
                             <ul class="ts-social-list">

@@ -5,7 +5,7 @@
         <div class="row justify-content-between">
             <div class="col-9">
                 <h2 class="block-title">
-                    <span class="title-angle-shap"> Latest News</span>
+                    <span> Latest News</span>
                 </h2>
             </div>
             <div class="col-3">

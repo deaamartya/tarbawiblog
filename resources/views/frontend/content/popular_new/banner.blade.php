@@ -13,7 +13,7 @@
             <a href="{{url($dt->slug.'/article/'.$n->id.'/'.$n->slug)}}">{{$n->title}}</a>
         </h2>
         <h6 class="my-5 banner-post subtitle">{!! Str::limit($n->sub_title,145) !!}</h6>
-        <a href="#">
+        <a href="{{url($dt->slug.'/article/'.$n->id.'/'.$n->slug)}}">
             <button class="btn btn-outline-dark">Read More</button>
         </a>
     </div>

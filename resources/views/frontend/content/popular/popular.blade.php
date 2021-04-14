@@ -6,7 +6,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="featured-tab">
                     <h2 class="block-title-black">
-                        <span class="title-angle-shap"> Tranding - Popular </span>
+                        <span> Tranding - Popular </span>
                     </h2>
 
                     <div class="tab-content">
@@ -55,7 +55,7 @@
             <div class="col-lg-4 col-md-12">
 
                 <h2 class="block-title block-title-dark-black">
-                    <span class="title-angle-shap">Latest News </span>
+                    <span>Latest News </span>
                 </h2>
                 
                 <div class="list-post-block">

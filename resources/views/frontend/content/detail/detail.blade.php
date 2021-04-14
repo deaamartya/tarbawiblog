@@ -108,7 +108,7 @@
 
             <div class="col-lg-4 col-md-12">
                 <h2 class="block-title block-title-dark">
-                    <span class="title-angle-shap">Latest News </span>
+                    <span>Latest News </span>
                 </h2>
                 <div class="list-post-block">
                     <ul class="list-post">

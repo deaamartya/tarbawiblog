@@ -5,7 +5,7 @@
         <div class="row ts-gutter-30">
             <div class="col-12">
                 <h2 class="block-title">
-                    <span class="title-angle-shap"> Latest News</span>
+                    <span> Latest News</span>
                 </h2>
                 <div class="featured-tab">
                     <div class="tab-content">

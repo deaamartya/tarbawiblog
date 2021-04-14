@@ -302,6 +302,7 @@ class LandingController extends Controller
                 'news_category_news.category_news_id',
                 'category_news.id'
             )
+            ->orderBy('news.created_at','DESC')
             ->get();
 
         $ch_news_cate = MenuCategory::with('posts')
@@ -330,8 +331,9 @@ class LandingController extends Controller
             ->where('featured', true)
             ->limit(6)
             ->get();
+
         $data['category'] = view(
-            'frontend.content.category.category',
+            'frontend.content.category.category_new',
             compact('ch_news', 'latestNews', 'ch_news_cate', 'dt_news_category')
         );
 
@@ -417,7 +419,7 @@ class LandingController extends Controller
 
         $dt_news_category = MenuCategory::where('slug', $slug)->get();
 
-        $previuspost = DB::table('news')
+        $post_4 = DB::table('news')
             ->leftjoin('category_news', 'news.id', 'category_news.id')
             ->select(
                 'news.id',
@@ -431,25 +433,42 @@ class LandingController extends Controller
             ->orderBy('news.id', 'DESC')
             ->where('news.id', '<', $newsid)
             ->where('news.status', '=', 1)
-            ->limit(1)
+            ->limit(4)
             ->get();
 
-        $nextpost = DB::table('news')
-            ->leftjoin('category_news', 'news.id', 'category_news.id')
-            ->select(
-                'news.id',
-                'category_news.slug',
-                'news.slug',
-                'category_news.slug as ctgs',
-                'sub_title',
-                'img_news',
-                'news.title'
-            )
-            ->orderBy('news.id', 'DESC')
-            ->where('news.id', '>', $newsid)
-            ->where('news.status', '=', 1)
-            ->limit(1)
-            ->get();
+        // $previuspost = DB::table('news')
+        //     ->leftjoin('category_news', 'news.id', 'category_news.id')
+        //     ->select(
+        //         'news.id',
+        //         'category_news.slug',
+        //         'news.slug',
+        //         'category_news.slug as ctgs',
+        //         'sub_title',
+        //         'img_news',
+        //         'news.title'
+        //     )
+        //     ->orderBy('news.id', 'DESC')
+        //     ->where('news.id', '<', $newsid)
+        //     ->where('news.status', '=', 1)
+        //     ->limit(1)
+        //     ->get();
+
+        // $nextpost = DB::table('news')
+        //     ->leftjoin('category_news', 'news.id', 'category_news.id')
+        //     ->select(
+        //         'news.id',
+        //         'category_news.slug',
+        //         'news.slug',
+        //         'category_news.slug as ctgs',
+        //         'sub_title',
+        //         'img_news',
+        //         'news.title'
+        //     )
+        //     ->orderBy('news.id', 'DESC')
+        //     ->where('news.id', '>', $newsid)
+        //     ->where('news.status', '=', 1)
+        //     ->limit(1)
+        //     ->get();
 
         //        $latestNews = DB::table('news')->join('menu_categories', 'news.id', 'menu_categories.id')
         //                ->select('news.id', 'menu_categories.slug', 'news.slug', 'menu_categories.slug as ctgs', 'sub_title', 'img_news', 'news.title')
@@ -473,13 +492,14 @@ class LandingController extends Controller
             ->get();
 
         $data['detail'] = view(
-            'frontend.content.detail.detail',
+            'frontend.content.detail_new.detail',
             compact(
                 'news',
-                'previuspost',
-                'nextpost',
+                // 'previuspost',
+                // 'nextpost',
                 'latestNews',
-                'dt_news_category'
+                'dt_news_category',
+                'post_4',
             )
         );
         //        return view('frontend.content.detail.detail', $view);

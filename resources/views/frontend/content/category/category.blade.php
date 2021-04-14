@@ -10,7 +10,7 @@
                     <div class="col-12">
                         @foreach($dt_news_category->take(1) as $dt)
                         <h2 class="block-title">
-                            <span class="title-angle-shap">{{ $dt->slug}} - News is empty !!</span>
+                            <span>{{ $dt->slug}} - News is empty !!</span>
                         </h2>
                         @endforeach
                     </div>
@@ -20,7 +20,7 @@
                     <div class="col-12">
                         @foreach($dt_news_category->take(1) as $dt)
                         <h2 class="block-title">
-                            <span class="title-angle-shap">{{ $dt->slug}}</span>
+                            <span>{{ $dt->slug}}</span>
                         </h2>
                         @endforeach
                     </div>
@@ -125,11 +125,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>
 
             <div class="col-lg-4 col-md-12">
                 <h2 class="block-title block-title-dark">
-                    <span class="title-angle-shap">Latest News </span>
+                    <span>Latest News </span>
                 </h2>
                 <div class="list-post-block">
                     <ul class="list-post">

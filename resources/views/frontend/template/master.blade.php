@@ -18,16 +18,16 @@
 
     <body>
 
-        @include('frontend.menu.menu')
+        @include('frontend.menu.menu_new')
         @yield('banner_latest')
         @yield('latest')
         @yield('banner_popular')
         @yield('popular_news')
         @yield('category')
-        {{-- @yield('popular')
+        {{-- @yield('popular') --}}
         @yield('detail')
-        @yield('breaking-news')
-        @yield('search') --}}
+        {{-- @yield('breaking-news') --}}
+        @yield('search')
         <div class="gap-50"></div>
         @yield('slug')
         @include('frontend.template.footer')

@@ -17,7 +17,12 @@ class AppServiceProvider extends ServiceProvider {
     }
 
     public function boot() {
-        $menu = MenuCategory::where('status', 1)->get();
+        $menu = MenuCategory::where('status', 1)->whereNull('category_id')->get();
+        foreach($menu as $m){
+            $anak_menu = [];
+            $anak_menu = MenuCategory::where('category_id',$m->id)->where('status',1)->get();
+            $m->dropdown = $anak_menu;
+        }
         View::share('menu', $menu);
 
         $Gsetting = General::findOrFail(1);

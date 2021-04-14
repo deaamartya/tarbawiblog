@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row justify-content-between">
             <h2 class="block-title">
-                <span class="title-angle-shap"> Popular News</span>
+                <span> Popular News</span>
             </h2>
-            <a href="#">
+            {{-- <a href="#">
                 <button class="btn btn-outline-dark">More News</button>
-            </a>
+            </a> --}}
         </div>
         <div class="row ts-gutter-30">
             <div class="col-12">
